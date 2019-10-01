@@ -1,0 +1,66 @@
+﻿@model TrabajoFinal_U1_WebII.Models.ClsEjercicio3
+@{
+	ViewBag.Title = "LoginUsuario";
+	string cuentaActiva="";
+
+	if(Model.estado == false) {cuentaActiva = "disabled";	}else{cuentaActiva = "";}
+}
+
+@if (Model != null)
+{
+	<div class="row">
+		<div class="col col-3"></div>
+		<div class="col col-6">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Datos de la cuenta bancaria</h5>
+					<!-- Mostrar operaciones -->
+					<button type="button" class="btn btn-primary" @(cuentaActiva) data-toggle="modal" data-target="#exampleModalLong">Ver operaciones bancarias</button>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item"><b>ID:</b> @Model.id</li>
+					<li class="list-group-item"><b>Usuario:</b> @Model.usuario</li>
+					<li class="list-group-item"><b>Nombre y Apellido:</b> @Model.nombre @Model.apellido</li>
+					<li class="list-group-item"><b>Dinero Disponible:</b> @Model.dinero</li>
+					<li class="list-group-item"><b>Tipo de cuenta Bancaria:</b> @Model.tipoCuenta</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col col-3"></div>
+
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title" id="exampleModalLongTitle">Operaciones Bancarias</h3>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<h5>Retirar dineo</h5>
+					<hr />
+					<h5>Depositar dinero</h5>
+					<hr />
+					<h5>Cambiar Password</h5>
+					<hr />
+					<h5>Bloquear Tarjeta</h5>
+					<hr />
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+	Response.Redirect("");
+
+}
