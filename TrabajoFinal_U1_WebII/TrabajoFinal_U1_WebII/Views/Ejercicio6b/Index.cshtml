@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<h1 class="jumbotron">Documentos descargables UPT - FileResult</h1>
+@using (Html.BeginForm("TasaMora", "Ejercicio6b", FormMethod.Post))
+{
+    
+    <br />
+    <table class="table">
+        <tr>
+            <th>Reglamentos</th>
+            <th>Archivo</th>
+        </tr>
+
+        <tr>
+            <td>Directiva de Cobranza de Mora por Derechos de Enseñanza</td>
+            <td><button type="submit" name="Generar1" value="Generar1"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+
+        </tr>
+        <tr>
+            <td>Directiva de Gestión de Pagos por Derechos de Enseñanza en Pregrado</td>
+            <td><button type="submit" name="Generar2" value="Generar2"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+
+        <tr>
+            <td>Reglamento General de la Universidad Privada de Tacna</td>
+            <td><button type="submit" name="Generar3" value="Generar3"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+        <tr>
+            <td>Estatuto de la Universidad Privada de Tacna - Edición 2014</td>
+            <td><button type="submit" name="Generar4" value="Generar4"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+
+        <tr>
+            <td>Reglamento de Matricula Estudios y Evaluación de la Universidad Privada de Tacna</td>
+            <td><button type="submit" name="Generar5" value="Generar5"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+        <tr>
+            <td>Reglamento General de Grados y Títulos de la Universidad Privada de Tacna</td>
+            <td><button type="submit" name="Generar6" value="Generar6"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+
+        <tr>
+            <td>Reglamento de Diplomado de Post Grado de la Universidad Privada de Tacna</td>
+            <td><button type="submit" name="Generar7" value="Generar7"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+        <tr>
+            <td>Reglamento para la Expedición de Documentos Oficiales por la Oficina de Secretaría General de la Universidad Privada de Tacna</td>
+            <td><button type="submit" name="Generar8" value="Generar8"><img src="~/Imagenes/pdf-png.png" height="45" width="30" /></button></td>
+        </tr>
+
+    </table>
+
+
+}
