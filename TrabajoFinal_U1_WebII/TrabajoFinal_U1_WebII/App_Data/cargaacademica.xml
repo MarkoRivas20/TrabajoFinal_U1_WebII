@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cargasacademicas>
+  <cargaacademica>
+    <idcarga>13240</idcarga>
+    <idsemestre>2016012016</idsemestre>
+    <codigodocente>457865</codigodocente>
+    <codigocurso>ING-101</codigocurso>
+  </cargaacademica>
+  <cargaacademica>
+    <idcarga>32463540</idcarga>
+    <idsemestre>2016012016</idsemestre>
+    <codigodocente>457865</codigodocente>
+    <codigocurso>ING-102</codigocurso>
+  </cargaacademica>
+  <cargaacademica>
+    <idcarga>46541321</idcarga>
+    <idsemestre>2016022016</idsemestre>
+    <codigodocente>456598</codigodocente>
+    <codigocurso>ING-202</codigocurso>
+  </cargaacademica>
+</cargasacademicas>

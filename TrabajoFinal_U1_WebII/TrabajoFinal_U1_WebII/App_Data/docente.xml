@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<docentes>
+  <docente>
+    <codigo>457865</codigo>
+    <apellido>Alca Gomez</apellido>
+    <nombre>Javier</nombre>
+    <sexo>M</sexo>
+    <edad>35</edad>
+    <celular>945878965</celular>
+    <email>alca@hotmail.com</email>
+  </docente>
+
+  <docente>
+    <codigo>456598</codigo>
+    <apellido>Rodriguez Marca</apellido>
+    <nombre>Elard</nombre>
+    <sexo>M</sexo>
+    <edad>35</edad>
+    <celular>952317320</celular>
+    <email>eladroma@hotmail.com</email>
+  </docente>
+
+</docentes>

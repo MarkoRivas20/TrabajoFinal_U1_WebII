@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<semestres>
+  <semestre>
+    <id>2016012016</id>
+    <nombre>2016-I</nombre>
+    <año>2016</año>
+  </semestre>
+  
+  <semestre>
+    <id>2016022016</id>
+    <nombre>2016-II</nombre>
+    <año>2016</año>
+  </semestre>
+</semestres>

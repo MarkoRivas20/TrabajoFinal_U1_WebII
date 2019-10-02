@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cursos>
+  <curso>
+    <codigo>ING-101</codigo>
+    <nombrecurso>Matematica I</nombrecurso>
+    <horas>6</horas>
+    <creditos>5</creditos>
+    <prerequisito>Ninguno</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>1</ciclo>
+    <seccion>A</seccion>
+  </curso>
+
+  <curso>
+    <codigo>ING-102</codigo>
+    <nombrecurso>Matematica Basica I</nombrecurso>
+    <horas>6</horas>
+    <creditos>5</creditos>
+    <prerequisito>Ninguno</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>1</ciclo>
+    <seccion>A</seccion>
+  </curso>
+
+  <curso>
+    <codigo>ING-103</codigo>
+    <nombrecurso>Diseño en Ingenieria</nombrecurso>
+    <horas>6</horas>
+    <creditos>4</creditos>
+    <prerequisito>Ninguno</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>1</ciclo>
+    <seccion>A</seccion>
+  </curso>
+
+  <curso>
+    <codigo>ING-104</codigo>
+    <nombrecurso>Comunicacion Oral y Escrita</nombrecurso>
+    <horas>4</horas>
+    <creditos>3</creditos>
+    <prerequisito>Ninguno</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>1</ciclo>
+    <seccion>A</seccion>
+  </curso>
+
+  <curso>
+    <codigo>SI-171</codigo>
+    <nombrecurso>Introduccion a la Ingenieria de Sistemas</nombrecurso>
+    <horas>2</horas>
+    <creditos>2</creditos>
+    <prerequisito>Ninguno</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>1</ciclo>
+    <seccion>A</seccion>
+  </curso>
+
+  <curso>
+    <codigo>ING-201</codigo>
+    <nombrecurso>Matematica II</nombrecurso>
+    <horas>6</horas>
+    <creditos>5</creditos>
+    <prerequisito>ING-101</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>2</ciclo>
+    <seccion>A</seccion>
+  </curso>
+
+  <curso>
+    <codigo>ING-202</codigo>
+    <nombrecurso>Fisica I</nombrecurso>
+    <horas>6</horas>
+    <creditos>5</creditos>
+    <prerequisito>14 Creditos</prerequisito>
+    <tipo>Obligatorio</tipo>
+    <ciclo>2</ciclo>
+    <seccion>A</seccion>
+
+  </curso>
+</cursos>
