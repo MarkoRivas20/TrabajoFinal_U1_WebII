@@ -1,6 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <clientes>
-  
   <cliente>
     <id>1</id>
     <usuario>admin</usuario>
@@ -11,18 +10,16 @@
     <tipocuenta>credito</tipocuenta>
     <estado>true</estado>
   </cliente>
-
   <cliente>
     <id>2</id>
     <usuario>andre</usuario>
     <password>123</password>
     <nombre>Andre Sebastian</nombre>
     <apellido>Reinoso Aranda</apellido>
-    <dinero>46464,67</dinero>
+    <dinero>50464,67</dinero>
     <tipocuenta>credito</tipocuenta>
-    <estado>true</estado>
+    <estado>false</estado>
   </cliente>
-
   <cliente>
     <id>3</id>
     <usuario>samuel</usuario>
@@ -33,7 +30,6 @@
     <tipocuenta>ahorro</tipocuenta>
     <estado>true</estado>
   </cliente>
-
   <cliente>
     <id>4</id>
     <usuario>marko</usuario>
@@ -44,6 +40,4 @@
     <tipocuenta>corriente</tipocuenta>
     <estado>false</estado>
   </cliente>
-
-
 </clientes>

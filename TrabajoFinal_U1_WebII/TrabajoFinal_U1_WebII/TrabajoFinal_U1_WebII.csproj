@@ -149,6 +149,11 @@
     <Content Include="Views\Ejercicio6a\Index.cshtml" />
     <Content Include="Views\Ejercicio3\Index.cshtml" />
     <Content Include="Views\Ejercicio3\LoginUsuario.cshtml" />
+    <Content Include="Views\Ejercicio3\retirarMonto.cshtml" />
+    <Content Include="Views\Ejercicio3\CerrarSesion.cshtml" />
+    <Content Include="Views\Ejercicio3\depositarMonto.cshtml" />
+    <Content Include="Views\Ejercicio3\cambiarPassword.cshtml" />
+    <Content Include="Views\Ejercicio3\bloquearTarjeta.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

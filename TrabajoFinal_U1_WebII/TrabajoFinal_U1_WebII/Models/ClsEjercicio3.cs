@@ -26,7 +26,7 @@ namespace TrabajoFinal_U1_WebII.Models
             XDocument xmlUsuario = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
             var objEjercicio3 = new ClsEjercicio3();
             objEjercicio3 = (from c in xmlUsuario.Descendants("cliente")
-                             where c.Element("usuario").Value.ToString() == (usuarioLog) ||
+                             where c.Element("usuario").Value.ToString() == (usuarioLog) &&
                                    c.Element("password").Value.ToString() == (passwordLog)
                              select new ClsEjercicio3
                              {
@@ -40,10 +40,61 @@ namespace TrabajoFinal_U1_WebII.Models
                                  estado = Convert.ToBoolean(c.Element("estado").Value.ToString())
 
                              }
-                             ).First();
-
-
+                             ).FirstOrDefault();
             return objEjercicio3;
+        }
+
+        public void retiroBancario(string idUsuario, double cantidadRetiro, double cantidadDineroActual)
+        {
+            double dineroactual = cantidadDineroActual - cantidadRetiro;
+            XDocument cliente = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            XElement clienteElement = cliente.Descendants("cliente").Where(c => c.Element("id").Value.Equals(idUsuario.ToString())).FirstOrDefault();
+            if (clienteElement != null)
+            {
+                clienteElement.Element("dinero").Value = dineroactual.ToString();
+
+                cliente.Save(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            }
+
+        }
+
+        public void depositoBancario(string idUsuario, double cantidadDeposito, double cantidadDineroActual)
+        {
+            double dineroactual = cantidadDineroActual + cantidadDeposito;
+            XDocument cliente = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            XElement clienteElement = cliente.Descendants("cliente").Where(c => c.Element("id").Value.Equals(idUsuario.ToString())).FirstOrDefault();
+            if (clienteElement != null)
+            {
+                clienteElement.Element("dinero").Value = dineroactual.ToString();
+
+                cliente.Save(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            }
+
+        }
+
+        public void modificarPassword(string idUsuario, string passwordUsuario)
+        {
+            XDocument cliente = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            XElement clienteElement = cliente.Descendants("cliente").Where(c => c.Element("id").Value.Equals(idUsuario.ToString())).FirstOrDefault();
+            if (clienteElement != null)
+            {
+                clienteElement.Element("password").Value = passwordUsuario.ToString();
+
+                cliente.Save(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            }
+
+        }
+        public void bloquearTarjeta(string idUsuario, string estado)
+        {
+            XDocument cliente = XDocument.Load(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            XElement clienteElement = cliente.Descendants("cliente").Where(c => c.Element("id").Value.Equals(idUsuario.ToString())).FirstOrDefault();
+            if (clienteElement != null)
+            {
+                clienteElement.Element("estado").Value = estado.ToString();
+
+                cliente.Save(HttpContext.Current.Server.MapPath("~/App_Data/clientes.xml"));
+            }
+
         }
     }
 }
