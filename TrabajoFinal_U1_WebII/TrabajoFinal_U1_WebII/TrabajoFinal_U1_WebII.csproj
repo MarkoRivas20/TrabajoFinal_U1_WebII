@@ -89,6 +89,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\clientes.xml" />
+    <Content Include="Audios\aire1.mp3" />
+    <Content Include="Audios\aire2.mp3" />
+    <Content Include="Audios\aire3.mp3" />
+    <Content Include="Audios\aire4.mp3" />
+    <Content Include="Audios\disparo.mp3" />
+    <Content Include="Audios\golpe.mp3" />
+    <Content Include="Audios\juas.mp3" />
+    <Content Include="Audios\laser.mp3" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\pdf-png.png" />
     <Content Include="Imagenes\verpdf.png" />
@@ -113,6 +121,7 @@
     <Compile Include="Controllers\Ejercicio5cController.cs" />
     <Compile Include="Controllers\Ejercicio6aController.cs" />
     <Compile Include="Controllers\Ejercicio6bController.cs" />
+    <Compile Include="Controllers\Ejercicio6cController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +167,7 @@
     <Content Include="Views\Ejercicio3\bloquearTarjeta.cshtml" />
     <Content Include="Views\Ejercicio5c\Index.cshtml" />
     <Content Include="Views\Ejercicio5c\Mostrar.cshtml" />
+    <Content Include="Views\Ejercicio6c\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,45 +7,57 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Layout</title>
-    <link href="~/Source/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Source/css/bootstrap.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Layout</title>
+	<link href="~/Source/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Source/css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="#">Trabajo Final Unidad 1</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+			<a class="navbar-brand" href="#">Trabajo Final Unidad 1</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Ejercicios
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="~/Ejercicio1/Index">Ejercicio 1</a>
-                            <a class="dropdown-item" href="~/Ejercicio2/Index">Ejercicio 2</a>
-                            <a class="dropdown-item" href="~/Ejercicio3/Index">Ejercicio 3</a>
-                            <a class="dropdown-item" href="~/Ejercicio5c/Index">Ejercicio 5c</a>
-                            <a class="dropdown-item" href="~/Ejercicio6a/Index">Ejercicio 6-a</a>
-                            <a class="dropdown-item" href="~/Ejercicio6b/Index">Ejercicio 6-b</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Ejercicios
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="~/Ejercicio1/Index">Ejercicio 1</a>
+							<a class="dropdown-item" href="~/Ejercicio2/Index">Ejercicio 2</a>
+							<a class="dropdown-item" href="~/Ejercicio3/Index">Ejercicio 3</a>
+							<a class="dropdown-item" href="~/Ejercicio5c/Index">Ejercicio 5c</a>
+							<a class="dropdown-item" href="~/Ejercicio6a/Index">Ejercicio 6-a</a>
+							<a class="dropdown-item" href="~/Ejercicio6b/Index">Ejercicio 6-b</a>
 
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div>
-            @RenderBody()
-        </div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div>
+			@RenderBody()
+		</div>
 
-        <script src="~/Source/js/jquery-3.4.1.min.js"></script>
-        <script src="~/Source/js/bootstrap.min.js"></script>
-    </div>
+		<script src="~/Source/js/jquery-3.4.1.min.js"></script>
+		<script src="~/Source/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('#example').DataTable({
+					"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
+				});
+			});
+
+		</script>
+	</div>
 </body>
 </html>
