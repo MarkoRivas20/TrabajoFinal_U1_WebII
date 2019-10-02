@@ -1,0 +1,23 @@
+﻿@using TrabajoFinal_U1_WebII.Models;
+@model TrabajoFinal_U1_WebII.Models.ClsEjercicio4
+@{
+    ViewBag.Title = "ModificarCargaAcademica";
+}
+
+<center>
+
+    <h1>Modificar Carga Académica</h1>
+
+    @using (Html.BeginForm("Modificar", "Ejercicio4", FormMethod.Post))
+    {
+        @Html.Label("ID Carga: ");
+        <input type="hidden" name="idcarga" value="@Model.idcarga" /> <br />
+        @Html.Label("ID Semestre: ");
+        <input type="text" name="idsemestre" value="@Model.idsemestre" /><br />
+        @Html.Label("Codigo Docente: ");
+        <input type="text" name="codigodocente" value="@Model.codigodocente" /><br />
+        @Html.Label("Codigo Curso: ");
+        <input type="text" name="codigocurso" value="@Model.codigocurso" /><br />
+        <input type="submit" value="Modificar" />
+    }
+</center>

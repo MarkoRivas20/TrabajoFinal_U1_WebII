@@ -1,0 +1,134 @@
+﻿@using TrabajoFinal_U1_WebII.Models;
+@model IEnumerable<TrabajoFinal_U1_WebII.Models.ClsEjercicio4>
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+}
+<div>
+    <div class="bg-dark">
+
+        <h3 class="text-light"><b><center>Ejercicio 4</center></b></h3>
+        <br>
+        <div class="container" align="right">
+            <h2 class="page-header">
+                <a href="AgregarCargaAcademica" class="btn btn-info">Nueva Carga</a>
+            </h2>
+        </div>
+        <br />
+        <div class="container">
+            <div>
+                <h5 class="text-light">Consulta de cursos por Docente y Semestre</h5>
+                @using (Html.BeginForm("Index", "Ejercicio4", FormMethod.Post))
+                {
+                    <input type="hidden" name="criterio" value="docente" />
+                    <input type="text" name="docente" />
+
+                    <input type="text" name="semestre" />
+
+                    <input type="submit" value="Buscar" class="btn btn-light">
+                }
+
+            </div>
+            <br />
+            <div>
+                <h5 class="text-light">Consulta de cursos por Ciclo</h5>
+                @using (Html.BeginForm("Index", "Ejercicio4", FormMethod.Post))
+                {
+                    <input type="hidden" name="criterio" value="ciclo" />
+
+                    <select name="ciclo">
+                        <option value="null">Ciclo</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+
+                    <input type="submit" value="Buscar" class="btn btn-light">
+                }
+            </div>
+            <br />
+            <div>
+                <h5 class="text-light">Consulta de cursos por Tipo</h5>
+                @using (Html.BeginForm("Index", "Ejercicio4", FormMethod.Post))
+                {
+                    <input type="hidden" name="criterio" value="tipo" />
+
+                    <select name="tipo">
+                        <option value="null">Tipo</option>
+                        <option value="Obligatorio">Obligatorio</option>
+                        <option value="Electivo">Electivo</option>
+
+                    </select>
+                    <input type="submit" value="Buscar" class="btn btn-light">
+                }
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-hover" id="tblcarga" border="1">
+                <thead>
+                    <tr>
+                        <td>Nro</td>
+                        <td>Docente</td>
+                        <td>Curso</td>
+                        <td>Tipo</td>
+                        <td>Ciclo</td>
+                        <td>Semestre</td>
+                        <td>Acciones</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int n = 1;}
+
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td>@(n++)</td>
+                            <td>@Html.DisplayFor(modelItem => c.nombresdocente)</td>
+                            <td>@Html.DisplayFor(modelItem => c.nombrecurso)</td>>
+                            <td>@Html.DisplayFor(modelItem => c.tipocurso)</td>>
+                            <td>@Html.DisplayFor(modelItem => c.ciclocurso)</td>>
+                            <td>@Html.DisplayFor(modelItem => c.nombresemestre)</td>>
+                            <td>
+                                @using (Html.BeginForm("ModificarCargaAcademica", "Ejercicio4", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="idcarga" value="@Html.DisplayFor(modelItem => c.idcarga).ToString()" />
+                                    <input type="submit" value="Modificar" class="btn btn-warning">
+                                }
+
+                                @using (Html.BeginForm("Index", "Ejercicio4", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => c.idcarga).ToString()" />
+                                    <input type="submit" value="Eliminar" class="btn btn-danger">
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="~/Source/js/jquery-3.4.1.min.js"></script>
+<script src="~/Source/js/bootstrap.min.js"></script>
+<script>
+    var usedNames = {};
+    $("select > option").each(function () {
+        if (usedNames[this.text]) {
+            $(this).remove();
+        } else {
+            usedNames[this.text] = this.value;
+        }
+    });
+</script>
+

@@ -1,0 +1,20 @@
+﻿@using TrabajoFinal_U1_WebII.Models;
+@{
+    ViewBag.Title = "AgregarCargaAcademica";
+}
+<center>
+    <h1>Agregar Carga Académica</h1>
+
+    @using (Html.BeginForm("Agregar", "Ejercicio4", FormMethod.Post))
+    {
+        @Html.Label("ID Carga: ");
+        <input type="text" name="idcarga" /> <br />
+        @Html.Label("ID Semestre: ");
+        <input type="text" name="idsemestre" /><br />
+        @Html.Label("Codigo Docente: ");
+        <input type="text" name="codigodocente" /><br />
+        @Html.Label("Codigo Curso: ");
+        <input type="text" name="codigocurso" /><br />
+        <input type="submit" value="Agregar" />
+    }
+</center>
