@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <clientes>
   <cliente>
     <id>1</id>
-    <usuario>admin</usuario>
+    <usuario>sebastian</usuario>
     <password>123</password>
-    <nombre>Andre Sebastian</nombre>
-    <apellido>Reinoso Aranda</apellido>
+    <nombre>Sebastian Andre</nombre>
+    <apellido>Aranda Reinoso</apellido>
     <dinero>4578,65</dinero>
     <tipocuenta>credito</tipocuenta>
     <estado>true</estado>
