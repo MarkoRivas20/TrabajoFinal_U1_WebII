@@ -4,50 +4,57 @@
 }
 
 <h1 class="jumbotron">Ejercicio 2</h1>
-<div>
-    <h5>Matriz Suma</h5>
-    <table class="table">
+@if (ViewBag.band != 1)
+{
+    <div>
+        <h5>Matriz Suma</h5>
+        <table class="table">
 
-        @for (int i = 0; i < Model.fil; i++)
-        {
-            <tr>
-                @for (int j = 0; j < Model.col; j++)
-                {
-                    <td>@ViewBag.matrizSuma[i, j]</td>
-                }
-            </tr>
-        }
-    </table>
-</div>
-<div>
-    <h5>Matriz Resta</h5>
-    <table class="table">
+            @for (int i = 0; i < Model.fil; i++)
+            {
+                <tr>
+                    @for (int j = 0; j < Model.col; j++)
+                    {
+                        <td>@ViewBag.matrizSuma[i, j]</td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+    <div>
+        <h5>Matriz Resta</h5>
+        <table class="table">
 
-        @for (int i = 0; i < Model.fil; i++)
-        {
-            <tr>
-                @for (int j = 0; j < Model.col; j++)
-                {
-                    <td>@ViewBag.matrizResta[i, j]</td>
-                }
-            </tr>
-        }
-    </table>
-</div>
-<div>
-    <h5>Matriz Multiplicacion</h5>
-    <table class="table">
+            @for (int i = 0; i < Model.fil; i++)
+            {
+                <tr>
+                    @for (int j = 0; j < Model.col; j++)
+                    {
+                        <td>@ViewBag.matrizResta[i, j]</td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+    <div>
+        <h5>Matriz Multiplicacion</h5>
+        <table class="table">
 
-        @for (int i = 0; i < Model.fil; i++)
-        {
-            <tr>
-                @for (int j = 0; j < Model.col; j++)
-                {
-                    <td>@ViewBag.matrizMultiplicacion[i, j]</td>
-                }
-            </tr>
-        }
-    </table>
-</div>
+            @for (int i = 0; i < Model.fil; i++)
+            {
+                <tr>
+                    @for (int j = 0; j < Model.col; j++)
+                    {
+                        <td>@ViewBag.matrizMultiplicacion[i, j]</td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+}
+else{ 
+    <h3 class="alert-danger">Error</h3>
+}
+
 
 

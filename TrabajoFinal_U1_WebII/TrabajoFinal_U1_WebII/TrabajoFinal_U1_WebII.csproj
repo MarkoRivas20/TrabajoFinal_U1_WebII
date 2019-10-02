@@ -110,6 +110,7 @@
     <Compile Include="Controllers\Ejercicio1Controller.cs" />
     <Compile Include="Controllers\Ejercicio2Controller.cs" />
     <Compile Include="Controllers\Ejercicio3Controller.cs" />
+    <Compile Include="Controllers\Ejercicio5cController.cs" />
     <Compile Include="Controllers\Ejercicio6aController.cs" />
     <Compile Include="Controllers\Ejercicio6bController.cs" />
     <Compile Include="Global.asax.cs">
@@ -118,6 +119,7 @@
     <Compile Include="Models\ClsEjercicio1.cs" />
     <Compile Include="Models\ClsEjercicio2.cs" />
     <Compile Include="Models\ClsEjercicio3.cs" />
+    <Compile Include="Models\ClsEjercicio5c.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +156,8 @@
     <Content Include="Views\Ejercicio3\depositarMonto.cshtml" />
     <Content Include="Views\Ejercicio3\cambiarPassword.cshtml" />
     <Content Include="Views\Ejercicio3\bloquearTarjeta.cshtml" />
+    <Content Include="Views\Ejercicio5c\Index.cshtml" />
+    <Content Include="Views\Ejercicio5c\Mostrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

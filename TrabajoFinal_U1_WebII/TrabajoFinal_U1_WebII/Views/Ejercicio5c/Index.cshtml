@@ -1,0 +1,29 @@
+﻿@model TrabajoFinal_U1_WebII.Models.ClsEjercicio5c
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+
+    <h1 class="jumbotron">Ejercicio 5 - Formula General</h1>
+    <br /><br />
+    @using (Html.BeginForm("Mostrar", "Ejercicio5c", FormMethod.Post))
+    {
+        <p>
+            @Html.Label("Ingrese variable A")
+            @Html.EditorFor(model => model.a)
+        </p>
+        <p>
+            @Html.Label("Ingrese variable B")
+            @Html.EditorFor(model => model.b)
+        </p>
+        <p>
+            @Html.Label("Ingrese variable C")
+            @Html.EditorFor(model => model.c)
+        </p>
+
+        <input class="btn btn-primary" type="submit" value="Calcular" />
+    }
+
+</div>
+
